@@ -1,4 +1,4 @@
-# Manual Técnico: Pentesting desde Cero — Máquina Mr. Robot
+# Manual Técnico: VulnHUB — Máquina Mr. Robot
 ### Enumeración Web, Fuerza Bruta con BurpSuite, Reverse Shell en PHP y Escalada de Privilegios mediante SUID
 
 ---
@@ -36,6 +36,9 @@
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 1. Introducción y Contexto
 
 La máquina **Mr. Robot** es un entorno de práctica de pentesting basado en **Linux** e inspirado en la serie homónima. Está disponible en plataformas como VulnHub y es ampliamente utilizada en formación de ciberseguridad ofensiva por su cadena de explotación clara y progresiva.
@@ -52,6 +55,9 @@ El flujo de ataque sigue la metodología estándar de pruebas de penetración: r
 La máquina contiene **tres flags** que deben ser localizadas a lo largo del proceso.
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 2. Reconocimiento y Enumeración
 
@@ -125,6 +131,9 @@ nmap -sCV -p 80,443 <IP_OBJETIVO>
 - El puerto 22 (SSH) aparece cerrado en esta máquina; el vector de entrada principal es el puerto 80 (HTTP).
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 3. Análisis de la Aplicación Web
 
@@ -211,6 +220,9 @@ https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/wordpress
 ```
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 4. Explotación del Panel de Login de WordPress
 
@@ -357,6 +369,9 @@ La contraseña obtenida es: **`ER28-0652`**
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 5. Obtención de Reverse Shell mediante WordPress
 
 ### 5.1 Concepto Teórico: Reverse Shell
@@ -460,6 +475,9 @@ Si la configuración es correcta, la máquina víctima establecerá una conexió
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 6. Post-Explotación: Movimiento Lateral
 
 ### 6.1 Localización y Crackeo del Hash MD5
@@ -537,6 +555,9 @@ cat /home/robot/key-2-of-3.txt
 - Si `su` falla por falta de TTY, `python -c 'import pty; pty.spawn("/bin/bash")'` resuelve el problema.
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 7. Escalada de Privilegios mediante SUID
 
@@ -648,6 +669,9 @@ whoami
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 8. Captura de Flags
 
 La máquina Mr. Robot contiene tres flags distribuidas a lo largo del proceso de explotación:
@@ -665,6 +689,9 @@ cat /root/key-3-of-3.txt
 ```
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 9. Resumen de Puntos Clave
 
@@ -695,6 +722,9 @@ cat /root/key-3-of-3.txt
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 10. Inventario Final de Herramientas
 
 | Herramienta / Plataforma | Tipo | Descripción | Instalación / Disponibilidad |
@@ -718,4 +748,3 @@ cat /root/key-3-of-3.txt
 | **wget** | Descarga de ficheros | Descarga ficheros desde URLs HTTP/HTTPS/FTP por línea de comandos. | Preinstalado en Kali Linux y en la mayoría de distribuciones Linux |
 | **WordPress** | CMS | Sistema de gestión de contenidos. En esta máquina, actúa como superficie de ataque principal. | Nativo en la máquina Mr. Robot |
 | **VulnHub / HTB** | Plataformas CTF | Plataformas de práctica de ciberseguridad con máquinas vulnerables en entornos controlados. | `https://www.vulnhub.com` / `https://www.hackthebox.com` |
-```
