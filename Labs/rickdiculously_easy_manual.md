@@ -51,6 +51,7 @@
 
 ---
 
+<!-- SALTO DE PAGINA -->
 <div style="page-break-after: always;"></div>
 
 ## 1. Introducción y Contexto
@@ -72,6 +73,9 @@ Las técnicas y vulnerabilidades trabajadas en esta máquina son:
 El flujo de ataque sigue la metodología estándar: reconocimiento → enumeración → explotación → post-explotación → escalada de privilegios → captura de flags.
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 2. Preparación del Entorno de Laboratorio
 
@@ -113,6 +117,9 @@ Para cada máquina (atacante y víctima): **Configuración → Red → Adaptador
 - Activar DHCP evita errores de configuración manual de IP.
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 3. Reconocimiento y Enumeración
 
@@ -222,6 +229,9 @@ nmap -sCV -p <PUERTOS_NUEVOS> <IP_OBJETIVO>
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 4. Análisis del Servicio FTP — Puerto 21
 
 ### 4.1 Concepto Teórico: FTP y Anonymous Login
@@ -291,6 +301,9 @@ cat FLAG.txt
 - El directorio `/pub` vacío debe anotarse: su posible accesibilidad vía web lo convierte en un potencial destino para subida de ficheros maliciosos.
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 5. Análisis de la Aplicación Web — Puertos 80 y 9090
 
@@ -410,6 +423,9 @@ Este tipo de credencial embebida en comentarios de código es un hallazgo habitu
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 6. Vulnerabilidad: Command Injection
 
 ### 6.1 Concepto Teórico
@@ -510,6 +526,9 @@ Los usuarios con shell `/bin/bash` tienen acceso interactivo al sistema y, por e
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 7. Acceso Remoto con SSH — Puerto 22222
 
 ### 7.1 Concepto Teórico: SSH en CTF
@@ -554,6 +573,9 @@ summer@localhost:~$
 - Verificar siempre el prompt tras la conexión para confirmar el usuario y el hostname de la máquina comprometida.
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 8. Transferencia de Ficheros mediante Servidor HTTP con Python
 
@@ -659,6 +681,9 @@ scp -P 22222 Summer@<IP_OBJETIVO>:/home/Morty/journal.txt.zip ./
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 9. Análisis de Ficheros Extraídos
 
 ### 9.1 Esteganografía: Extracción de Datos con Strings
@@ -745,6 +770,9 @@ La salida revela que el ejecutable requiere un argumento numérico para desbloqu
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 10. Gestión de Permisos y Movimiento Lateral
 
 ### 10.1 Concepto Teórico: Permisos en Linux
@@ -807,6 +835,9 @@ chmod +x safe
 - El propietario de una copia puede asignar permisos de ejecución a la misma, eludiendo las restricciones del fichero original.
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 11. Escalada de Privilegios a Root
 
@@ -909,6 +940,9 @@ tail -n 30 FLAG.txt
 
 ---
 
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
+
 ## 12. Captura de Flags
 
 La máquina Rickdiculously Easy contiene un total de **130 puntos** distribuidos en múltiples flags:
@@ -928,6 +962,9 @@ La máquina Rickdiculously Easy contiene un total de **130 puntos** distribuidos
 > **Nota:** Las flags individuales suman el total de 130 puntos establecido por la máquina.
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 13. Resumen de Puntos Clave
 
@@ -968,6 +1005,9 @@ La máquina Rickdiculously Easy contiene un total de **130 puntos** distribuidos
 - `sudo su` con permisos `ALL` proporciona acceso inmediato a root.
 
 ---
+
+<!-- SALTO DE PAGINA -->
+<div style="page-break-after: always;"></div>
 
 ## 14. Inventario Final de Herramientas
 
