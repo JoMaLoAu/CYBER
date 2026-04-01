@@ -1,4 +1,3 @@
-```markdown
 # Manual Técnico: Pentesting desde Cero — Máquina Mr. Robot
 ### Enumeración Web, Fuerza Bruta con BurpSuite, Reverse Shell en PHP y Escalada de Privilegios mediante SUID
 
